@@ -32,8 +32,17 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// Routes
+
+// Setup like so
+// app.HTTPMETHOD('path', serverCallBackFunction)
+
 app.get('/', function(res, res) {
   res.render('index');
+});
+
+app.get('/contact', function(res, res) {
+  res.render('contact');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
